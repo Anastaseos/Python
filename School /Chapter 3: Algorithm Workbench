@@ -1,1 +1,42 @@
+Write an if statement that checks if the variable a is equal to 1. If it is equal to 1,
+print a message saying ‘a equals 1’ , else print ‘a is not equal to 1’ .
+
+import random
+
+a = random.randint(0, 1)
+if a == 1:
+    print("a equals 1")
+else:
+    print("a does not equal 1")
+
+________________________________________________________________________________________
+Write an if statement that checks if the value a lies in the range of 10 to 30 and
+assigns the value of the variable a to 20.
+
+if 10 <= a <= 30:
+    a = 20
+
+________________________________________________________________________________________
+Write an if-else statement that assigns 0 to the variable b if the variable a is less
+than 10. Otherwise, it should assign 99 to the variable b.
+
+if a < 10:
+    b = 0
+else:
+    b = 99
+
+________________________________________________________________________________________
+Write an if-else statement that asks the user to enter the speed at which he is driving.
+If the speed is more than 50 print ‘Speed in limit’ , else print ‘Speed should be
+checked’.
+
+speed = float(input("What was your speed: "))
+
+if speed > 50:
+    print("Speed in limit")
+else:
+    print("Speed should be checked")
+
+________________________________________________________________________________________
+
 

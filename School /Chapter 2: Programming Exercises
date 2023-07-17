@@ -1,3 +1,5 @@
+SALES PREDICTION
+
 A company has determined that its annual profit is typically 23 percent of total sales. Write
 a program that asks the user to enter the projected amount of total sales, and then displays
 the profit that will be made from that amount.
@@ -7,6 +9,8 @@ profit = total_sales * 0.23
 print("Your profit is:", profit)
 
 _______________________________________________________________________________________________
+LAND CALCULATION
+
 One acre of land is equivalent to 43,560 square feet. Write a program that asks the user to
 enter the total square feet in a tract of land and calculates the number of acres in the tract.
 
@@ -15,6 +19,8 @@ calculate = float(input("Total Square Feet: "))
 print(calculate / one_acre)
 
 _______________________________________________________________________________________________
+TOTAL PURCHASE
+
 A customer in a store is purchasing five items. Write a program that asks for the price of
 each item, and then displays the subtotal of the sale, the amount of sales tax, and the total.
 Assume the sales tax is 7 percent.
@@ -33,6 +39,8 @@ print(sales_tax_total)
 print(total)
 
 _______________________________________________________________________________________________
+DISTANCE TRAVELED
+
 A car is traveling at 70 miles per hour. Write a program that displays the following:
 • The distance the car will travel in 6 hours
 • The distance the car will travel in 10 hours
@@ -43,7 +51,10 @@ speed = 70
 print("Distance traveled in 6 hours:", speed * 6, "miles")
 print("Distance traveled in 10 hours:", speed * 10,"miles")
 print("Distance traveled in 15 hours:", speed * 15, "miles")
+
 _______________________________________________________________________________________________
+SALES TAX
+
 Write a program that will ask the user to enter the amount of a purchase. The program
 should then compute the state and county sales tax. Assume the state sales tax is 5 percent
 and the county sales tax is 2.5 percent. The program should display the amount of the pur-
@@ -67,9 +78,77 @@ print("State Sales Tax:", state_sales_tax)
 print("County Sales Tax:", county_sales_tax)
 print("Total Sales Tax:", total_sales_tax)
 print("Total Sale Amount:", total_sale_amount)
+
 _______________________________________________________________________________________________
+MILES PER GALLON
+
+A car’s miles-per-gallon (MPG) can be calculated with the following formula:
+MPG 5 Miles driven Gallons of gas used
+Write a program that asks the user for the number of miles driven and the gallons of gas
+used. It should calculate the car’s MPG and display the result.
+
+mpg = float(input("Please enter MPG: "))
+gog = float(input("Please enter Gallons used: "))
+print("The cars total MPG is:", mpg / gog)
+
+_______________________________________________________________________________________________
+STOCK TRANSACTION PROGRAM
+
+Last month Joe purchased some stock in Acme Software, Inc. Here are the details of the
+purchase:
+• The number of shares that Joe purchased was 2,000.
+• When Joe purchased the stock, he paid $40.00 per share.
+• Joe paid his stockbroker a commission that amounted to 3 percent of the amount he
+paid for the stock.
+Two weeks later Joe sold the stock. Here are the details of the sale:
+• The number of shares that Joe sold was 2,000.
+• He sold the stock for $42.75 per share.
+• He paid his stockbroker another commission that amounted to 3 percent of the amount
+he received for the stock.
+Write a program that displays the following information:
+• The amount of money Joe paid for the stock.
+• The amount of commission Joe paid his broker when he bought the stock.
+• The amount that Joe sold the stock for.
+• The amount of commission Joe paid his broker when he sold the stock.
+• Display the amount of money that Joe had left when he sold the stock and paid his
+broker (both times). If this amount is positive, then Joe made a profit. If the amount is
+negative, then Joe lost money.
+
+VERSION 1:
+stocks = 2000
+price = 40 * 2000
+commission = price * 0.03
+sold = 42.75 * stocks
+second_commission = sold * 0.03
+profit = (sold - price) - (commission + second_commission)
+
+
+print("Joe paid:", price)
+print("Commission was:", commission)
+print("Joe sold for:", sold)
+print("Second commission was:", second_commission)
+print("Joe's total transaction resulted in:", profit)
 
 
 
+VERSION 2:
+PURCHASED_SHARES = 2000
+PURCHASE_PRICE_PER_SHARE = 40.00
+PURCHASE_COMMISSION_RATE = 0.03
+SALE_PRICE_PER_SHARE = 42.75
+SALE_COMMISSION_RATE = 0.03
 
+purchase_amount = PURCHASED_SHARES * PURCHASE_PRICE_PER_SHARE
+purchase_commission = purchase_amount * PURCHASE_COMMISSION_RATE
+
+sale_amount = PURCHASED_SHARES * SALE_PRICE_PER_SHARE
+sale_commission = sale_amount * SALE_COMMISSION_RATE
+
+remaining_amount = sale_amount - sale_commission - (purchase_amount + purchase_commission)
+
+print("Amount paid for the stock:", purchase_amount)
+print("Commission paid when buying the stock:", purchase_commission)
+print("Amount sold the stock for:", sale_amount)
+print("Commission paid when selling the stock:", sale_commission)
+print("Amount remaining after selling the stock and paying commissions:", remaining_amount)
 

@@ -38,5 +38,30 @@ else:
     print("Speed should be checked")
 
 ________________________________________________________________________________________
+Write an if-else statement that displays 'Speed is normal' if the speed vari-
+able is within the range of 24 to 56. If the speed variable’s value is outside this range,
+display 'Speed is abnormal' 
+
+import random
+speed = random.randint(10, 100)
+
+if 24 <= speed <= 56:
+    print("Speed is normal")
+else:
+    print("Speed is abnormal")
+
+________________________________________________________________________________________
+Write an if-else statement that determines whether the points variable is outside
+the range of 9 to 51. If the variable’s value is outside this range it should display
+“Invalid points.” Otherwise, it should display “Valid points.”
+
+import random
+points = random.randint(10, 100)
+
+if 9 <= points <= 51:
+    print("Valid points")
+else:
+    print("Invalid points")
+
 
 

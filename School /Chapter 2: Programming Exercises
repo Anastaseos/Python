@@ -1,1 +1,35 @@
+A company has determined that its annual profit is typically 23 percent of total sales. Write
+a program that asks the user to enter the projected amount of total sales, and then displays
+the profit that will be made from that amount.
 
+total_sales = float(input("Please enter total sales: "))
+profit = total_sales * 0.23
+print("Your profit is:", profit)
+
+_______________________________________________________________________________________________
+One acre of land is equivalent to 43,560 square feet. Write a program that asks the user to
+enter the total square feet in a tract of land and calculates the number of acres in the tract.
+
+one_acre = 43560
+calculate = float(input("Total Square Feet: "))
+print(calculate / one_acre)
+
+_______________________________________________________________________________________________
+A customer in a store is purchasing five items. Write a program that asks for the price of
+each item, and then displays the subtotal of the sale, the amount of sales tax, and the total.
+Assume the sales tax is 7 percent.
+
+SALES_TAX = 0.7
+subtotal = 0
+
+for i in range(1, 6):
+    price = float(input(f"Enter the price of the item {i}: "))
+    subtotal += price
+
+sales_tax_total = subtotal * SALES_TAX
+total = subtotal + sales_tax_total
+print(subtotal)
+print(sales_tax_total)
+print(total)
+
+_______________________________________________________________________________________________

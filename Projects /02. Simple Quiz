@@ -1,0 +1,41 @@
+print("Welcome to my Quiz!")
+
+playing = input("Do you want to play? Enter Y for Yes and N for No: ").lower()
+
+if playing != "y":
+    quit()
+
+print("Great!")
+score = 0
+
+answer = input("What does CPU stand for? ").lower()
+if answer == "central processing unit":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does GPU stand for? ").lower()
+if answer == "graphics processing unit":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does RAM stand for? ").lower()
+if answer == "random access memory":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does PSU stand for? ").lower()
+if answer == "power supply unit":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+percentage = (score / 4) * 100
+print(f"You got {score} questions correct!")
+print(f"You received {percentage}%")

@@ -41,9 +41,69 @@ for i in range(10):
     total += number
 
 print("The total of the numbers you entered is:", total)
+
 __________________________________________________________________________________________
+Write a loop that asks the user to enter a number. The loop should iterate 10 times and
+keep a running total of the numbers entered.
 
+total = 0
 
+for i in range(10):
+    number = float(input("Enter a number: "))
+    total += number
+
+print("The total of the numbers you entered is:", total)
+
+__________________________________________________________________________________________
+Write a program that accepts a number entered by the user and prints its Fibonacci
+series up to 10 times.
+
+def fibonacci(n):
+    fib_sequence = [n, n]
+    while len(fib_sequence) < 10:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+num = int(input("Enter a number: "))
+print(fibonacci(num))
+
+__________________________________________________________________________________________
+Write a program that accepts a number entered by the user and validates if it is odd or
+even. If it is even, print a series up to 4 using range() and if it’s odd print a series up to 7.
+
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("The number is even.")
+    for i in range(5):  
+        print(i)
+else:
+    print("The number is odd.")
+    for i in range(8):  
+        print(i)
+
+__________________________________________________________________________________________
+Write code that prompts the user to enter a positive nonzero number and validates the
+input.
+
+while True:
+    num = float(input("Please enter a positive, non-zero number: "))
+    if num > 0:
+        print("Thank you!")
+        break
+    else:
+        print("Invalid input. The number must be positive and non-zero. Please try again.")
+__________________________________________________________________________________________
+Write code that prompts the user to enter a number in the range of 1 through 100 and
+validates the input.
+
+while True:
+    num = float(input("Please enter a number between 1 and 100: "))
+    if 1 <= num <= 100:
+        print("Thank you!")
+        break
+    else:
+        print("Invalid input. The number must be between 1 and 100 (inclusive). Please try again.")
 
 
 

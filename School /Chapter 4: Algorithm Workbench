@@ -1,0 +1,33 @@
+Write a while loop that lets the user enter a number. The number should be multiplied
+by 10, and the result assigned to a variable named product . The loop should iterate as
+long as product is less than 100.
+
+product = 0
+
+while product < 100:
+    number = float(input("Enter a number: "))
+    product = number * 10
+    print(product)
+
+__________________________________________________________________________________________
+Write a program that accepts two numbers by the user, checks if the denominator is
+zero, divides them and then prints their division. If the denominator is zero, it should
+prompt the user “Division is not possible”.
+
+numerator = float(input("Enter the numerator: "))
+denominator = float(input("Enter the denominator: "))
+
+if denominator == 0:
+    print("Division is not possible")
+else:
+    result = numerator / denominator
+    print("The result is: ", result)
+
+__________________________________________________________________________________________
+Write a for loop that displays the following set of numbers:
+0, 10, 20, 30, 40, 50 . . . 1000
+
+for i in range(0, 1001, 10):
+    print(i)
+
+__________________________________________________________________________________________

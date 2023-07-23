@@ -34,18 +34,15 @@ a month. A loop should then prompt the user to enter each of his or her expenses
 month and keep a running total. When the loop finishes, the program should display the
 amount that the user is over or under budget.
 
-print("Please enter your budget for the month:")
-budget = float(input())
-
+budget = float(input("Please enter your budget for the month: "))
 total_expenses = 0
 
 while True:
-    print("Please enter an expense (or type '0' to finish):")
-    expense = float(input())
+    expense = float(input("Please enter an expense (or 0 to finish): "))
     if expense == 0:
-        break  # This will exit the loop if the user enters 0.
+        break  
     else:
-        total_expenses = total_expenses + expense  # Add the expense to the total.
+        total_expenses = total_expenses + expense  
 
 if total_expenses > budget:
     print("You are over budget by: $" + str(total_expenses - budget))
@@ -53,6 +50,9 @@ elif total_expenses < budget:
     print("You are under budget by: $" + str(budget - total_expenses))
 else:
     print("You spent exactly your budget.")
+
+_________________________________________________________________________________________________
+
 
 
 

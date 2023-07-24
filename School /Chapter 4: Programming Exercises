@@ -152,4 +152,42 @@ Assuming the ocean’s level is currently rising at about 1.6 millimeters per ye
 application that displays the number of millimeters that the ocean will have risen each year
 for the next 25 years.
 
+rising_level = 1.6
+years = 25
 
+for year in range(1, years + 1):
+    rise = year * rising_level
+    print(f"Year{year}: Ocean level rise = {rise} millimeters")
+
+_________________________________________________________________________________________________
+TUITION INCREASE
+
+At one college, the tuition for a full-time student is $8,000 per semester. It has been
+announced that the tuition will increase by 3 percent each year for the next 5 years. Write
+a program with a loop that displays the projected semester tuition amount for the next 5
+years
+
+tuition = 8000
+rate_increase = 0.03
+years = 5
+
+for year in range(1, years + 1):
+    tuition = tuition + (tuition * rate_increase)
+    print(f"Year{year}: Tuition = ${tuition:.2f}")
+
+_________________________________________________________________________________________________
+FACTORIAL OF A NUMBER
+
+Write a program that lets the user enter a nonnegative integer and then uses a loop to calculate
+the factorial of that number. Display the factorial.
+
+num = int(input("Enter a nonnegative integer: "))
+if num < 0:
+    print("invalid!")
+else:
+    factorial = 1
+    for i in range(1, num + 1):
+        factorial *= i
+
+        print(f"{num} : {factorial}")
+_________________________________________________________________________________________________

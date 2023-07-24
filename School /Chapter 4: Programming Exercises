@@ -52,8 +52,66 @@ else:
     print("You spent exactly your budget.")
 
 _________________________________________________________________________________________________
+DISTANCE TRAVELED
+
+The distance a vehicle travels can be calculated as follows:
+distance 5 speed 3 time
+For example, if a train travels 40 miles per hour for three hours, the distance traveled is
+120 miles. Write a program that asks the user for the speed of a vehicle (in miles per hour)
+and the number of hours it has traveled. It should then use a loop to display the distance
+the vehicle has traveled for each hour of that time period
 
 
+speed = float(input("What is the speed of the vehicle in mph? "))
+hours = int(input("How many hours has it traveled? "))
 
+print("Hour\tDistance Traveled")
+print("-------------------------")
+
+for hour in range(1, hours + 1):
+    distance = speed * hour
+    print(f"{hour}\t{distance}")
+
+_________________________________________________________________________________________________
+AVERAGE RAINFALL
+
+Write a program that uses nested loops to collect data and calculate the average rainfall
+over a period of years. The program should first ask for the number of years. The outer loop
+will iterate once for each year. The inner loop will iterate twelve times, once for each month.
+Each iteration of the inner loop will ask the user for the inches of rainfall for that month.
+After all iterations, the program should display the number of months, the total inches of
+rainfall, and the average rainfall per month for the entire period.
+
+
+# Ask for user input for number of years
+years = int(input("Enter the number of years: "))
+
+total_rainfall = 0
+
+# Outer loop for each year
+for year in range(1, years + 1):
+    # Inner loop for each month
+    for month in range(1, 13):
+        monthly_rainfall = float(input(f"Enter the inches of rainfall for Year {year} Month {month}: "))
+        total_rainfall += monthly_rainfall
+
+# Calculate the total months and the average rainfall
+total_months = years * 12
+average_rainfall = total_rainfall / total_months
+
+# Display the results
+print(f"\nNumber of months: {total_months}")
+print(f"Total inches of rainfall: {total_rainfall}")
+print(f"Average rainfall per month: {average_rainfall}")
+
+_________________________________________________________________________________________________
+PENNIES FOR PAY
+
+Write a program that calculates the amount of money a person would earn over a period
+of time if his or her salary is one penny the first day, two pennies the second day, and
+continues to double each day. The program should ask the user for the number of days.
+Display a table showing what the salary was for each day, and then show the total pay at
+the end of the period. The output should be displayed in a dollar amount, not the number
+of pennies.
 
 

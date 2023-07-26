@@ -8,8 +8,8 @@ def calculate_perimeter(length, width):
     return perimeter
 
 
-length = 5
-width = 3
+length = 5     #length = float(input("Enter length: "))
+width = 3      #width = float(input("Enter Width: "))
 area = calculate_area(length, width)
 perimeter = calculate_perimeter(length, width)
 

@@ -67,6 +67,7 @@ elif age < 20:
     print("The person is a teenager.")
 else:
     print("The person is an adult.")
+
 __________________________________________________________________________________________________
 ROMAN NUMERALS
 
@@ -74,6 +75,7 @@ Write a program that prompts the user to enter a number within the range of 1 th
 The program should display the Roman numeral version of that number. If the number is
 outside the range of 1 through 10, the program should display an error message. The fol-
 lowing table shows the Roman numerals for the numbers 1 through 10:
+
 
 roman = {
     "1": "I",
@@ -85,11 +87,12 @@ roman = {
 
 choice = input("Select a number for the Roman Numeral version: ")
 
-for number in roman:
-    if choice == number:
-        print(roman[number])
+
+if choice in roman:
+        print(roman[choice])
 else:
     print("Not applicable")
+
 __________________________________________________________________________________________________
 MASS AND WEIGHT
 

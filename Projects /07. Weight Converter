@@ -1,0 +1,30 @@
+def lbs_to_kgs(weight):
+    return weight * 0.45
+
+
+def kgs_to_lbs(weight):
+    return weight / 0.45
+
+
+def main():
+    print("Weight Converter.")
+    while True:
+        print("1: Lbs to Kgs")
+        print("2: Kgs to Lbs")
+        print("3: Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            weight = float(input("Enter weight in Lbs: "))
+            print(f"{weight}Lbs == {lbs_to_kgs(weight):.1f}Kgs")
+        elif choice == "2":
+            weight = float(input("Enter your weight in Kgs: "))
+            print(f"{weight}Kgs == {kgs_to_lbs(weight):.1f}Lbs")
+        elif choice == "3":
+            print("Goodbye.")
+            break
+        else:
+            print("Invalid. Choose the appropriate number.")
+
+
+if __name__ == "__main__":
+    main()

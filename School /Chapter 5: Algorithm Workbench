@@ -1,1 +1,17 @@
+Write a function named times_ten . The function should accept an argument and dis-
+play the product of its argument multiplied times 10.
+
+def times_ten(number):
+    return number * 10
+
+def main():
+    num1 = float(input("Enter number:   "))
+    total = times_ten(num1)
+    print(total)
+main()
+
+______________________________________________________________________________________
+Examine the following function header, and then write a statement that calls the func-
+tion, passing 12 as an argument.
+def show_value(quantity):
 

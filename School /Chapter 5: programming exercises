@@ -1,1 +1,25 @@
+KILOMETER CONVERTER
+
+Write a program that asks the user to enter a distance in kilometers, and then converts that
+distance to miles. The conversion formula is as follows:
+
+def km_to_miles():
+    km = float(input("Enter km: "))
+    miles = km * 0.6213
+    return miles
+
+
+def main():
+    miles = km_to_miles()
+    print("The distance in miles is:", miles)
+
+main()
+
+______________________________________________________________________________________________
+HOW MUCH INSURANCE
+
+Many financial experts advise that property owners should insure their homes or buildings
+for at least 80 percent of the amount it would cost to replace the structure. Write a pro-
+gram that asks the user to enter the replacement cost of a building and then displays the
+minimum amount of insurance he or she should buy for the property.
 

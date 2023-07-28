@@ -37,4 +37,45 @@ to b? What value will be assigned to c?
 a = 3, b = 2, c = 1
 
 ______________________________________________________________________________________
+ Look at the following function definition:
+
+def my_function(a, b, c):
+d = (a + c) / b
+print(d)
+
+Write a statement that calls this function and uses keyword arguments to pass 2 into
+a, 4 into b, and 6 into c.
+
+my_function(2, 4, 6)
+
+______________________________________________________________________________________
+Write a function named welcome() that asks the user to enter his or her name and
+displays it followed by a welcome message.
+
+def welcome():
+    greeting = input("Enter your name: ")
+    print("Welcome", greeting,"!")
+
+welcome()
+
+______________________________________________________________________________________
+The following statement calls a function named half, which returns a value that is half
+that of the argument. (Assume the number variable references a float value.) Write
+code for the function.
+result = half(number)
+
+def half(number):
+    return number / 2
+
+def main():
+    number = float(input("Enter number: "))
+    result = half(number)
+    print(result)
+main()
+
+______________________________________________________________________________________
+
+
+
+
 

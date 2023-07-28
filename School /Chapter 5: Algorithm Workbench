@@ -74,6 +74,38 @@ def main():
 main()
 
 ______________________________________________________________________________________
+What will the following code display:
+def display(x,y):
+    return(x%2==0)
+
+print(display(4,7)) == True #x is used for the remainder. 4 / 2 = Even
+print(display(7,4)) == False #x is used for the remainder. 7 / 2 = Odd
+
+______________________________________________________________________________________
+Write a function named area that accepts the base and perpendicular of a right-angled
+triangle as two arguments and returns the area of that triangle.
+
+def area(base, perp):
+    return 0.5 * base * perp
+def main():
+    base = float(input("Enter base: "))
+    perp = float(input("Enter height: "))
+
+    result = area(base, perp)
+    print(result)
+main()
+
+______________________________________________________________________________________
+Write a function named get_first_name that asks the user to enter his or her first
+name, and returns it.
+
+def get_first_name():
+    return input("Enter your first name: ")
+
+first_name = get_first_name()
+print(first_name)
+
+
 
 
 

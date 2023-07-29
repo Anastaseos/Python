@@ -23,3 +23,16 @@ for at least 80 percent of the amount it would cost to replace the structure. Wr
 gram that asks the user to enter the replacement cost of a building and then displays the
 minimum amount of insurance he or she should buy for the property.
 
+def insurance():
+     worth = float(input("Enter worth of the Estate: "))
+     insurance = worth * 0.8
+     return insurance
+def main():
+     min_insurance = insurance()
+     print(min_insurance)
+main()
+
+______________________________________________________________________________________________
+
+
+

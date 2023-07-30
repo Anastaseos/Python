@@ -33,6 +33,41 @@ def main():
 main()
 
 ______________________________________________________________________________________________
+AUTOMOBILE COSTS
+
+Write a program that asks the user to enter the monthly costs for the following expenses
+incurred from operating his or her automobile: loan payment, insurance, gas, oil, tires, and
+maintenance. The program should then display the total monthly cost of these expenses,
+and the total annual cost of these expenses.
+
+def monthly_expenses():
+    loan = float(input("Enter loan payment: "))
+    insurance = float(input("Enter insurance payment: "))
+    gas = float(input("Enter Gas: "))
+    oil = float(input("Enter oil cost: "))
+    tires = float(input("Enter tires cost: "))
+    maintenance = float(input("Enter maintenance cost: "))
+    total = loan + insurance + gas + oil + tires + maintenance
+    return total
+
+def main():
+    total_montly_cost = monthy_expenses()
+    print(total_montly_cost)
+main()
+
+______________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

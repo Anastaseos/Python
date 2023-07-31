@@ -95,6 +95,30 @@ calories from carbs = carb grams x 4
 The nutritionist asks you to write a program that will make these calculations.
 
 
+def calories_from_fat(fat_grams):
+    return fat_grams * 9
+
+def calories_from_carbs(carb_grams):
+    return carb_grams * 4
+
+def main():
+    while True:
+         choice = input("Select 1 for Fats, 2 for Carbs, or 3 to Exit: ")
+         if choice == "1":
+             fat_grams = float(input("Enter the amount of fat in grams: "))
+             print(f"{fat_grams} grams of fat == {calories_from_fat(fat_grams):.1f} calories")
+         elif choice == "2":
+             carb_grams = float(input("Enter the amount of carbohydrates in grams: "))
+             print(f"{carb_grams} grams of carbs == {calories_from_carbs(carb_grams):.1f} calories")
+         elif choice == "3":
+             print("Exiting...")
+             break
+         else:
+             print("Invalid choice. Please choose 1, 2 or 3.")
+
+main()
+
+______________________________________________________________________________________________
 
 
 

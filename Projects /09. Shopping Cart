@@ -1,0 +1,47 @@
+ITEMS = {
+    "apple": 0.75,
+    "banana": 0.50,
+    "orange": 1.25,
+    "bread": 2.50,
+    "milk": 3.00,
+    "eggs": 1.75,
+    "cheese": 4.00,
+    "yogurt": 2.00
+}
+
+def main():
+    cart = []  
+
+    while True:
+        print("1. Add item to cart")
+        print("2. Remove item from cart")
+        print("3. Calculate total")
+        print("4. Exit")
+        choice = int(input("Enter choice: "))
+
+        if choice == 1:
+            item = input("Enter item name: ").lower()
+            if item in ITEMS:
+                cart.append(item)
+                print(f"{item} added to cart")
+            else:
+                print("Item not found")
+        elif choice == 2:
+            item = input("Enter item name: ").lower()
+            if item in cart:
+                cart.remove(item)
+                print(f"{item} removed from cart")
+            else:
+                print(f"{item} not in cart")
+        elif choice == 3:
+            total = 0
+            for item in cart:
+                total += ITEMS[item]
+            print(f"Total price: ${total:.2f}")
+        elif choice == 4:
+            break
+        else:
+            print("Invalid choice")
+
+if __name__ == "__main__":
+    main()

@@ -148,9 +148,52 @@ def main():
 main()
 
 ______________________________________________________________________________________________
+MONTHLY SALES TAX
+
+A retail company must file a monthly sales tax report listing the total sales for the month,
+and the amount of state and county sales tax collected. The state sales tax rate is 5 percent
+and the county sales tax rate is 2.5 percent. Write a program that asks the user to enter the
+total sales for the month. From this figure, the application should calculate and display the
+following:
+• The amount of county sales tax
+• The amount of state sales tax
+• The total sales tax (county plus state)
 
 
+state_tax = 0.05
+county_tax = 0.025
 
+def main():
+    total_sales = float(input("Enter total sales: "))
+    county_sales_tax = total_sales * county_tax
+    state_sales_tax = total_sales * state_tax
+    total_sales_tax = county_sales_tax + state_sales_tax
+
+    print(county_sales_tax)
+    print(state_sales_tax)
+    print(total_sales_tax)
+
+main()
+
+______________________________________________________________________________________________
+FEET TO INCHES
+
+One foot equals 12 inches. Write a function named feet_to_inches that accepts a number
+of feet as an argument and returns the number of inches in that many feet. Use the function
+in a program that prompts the user to enter a number of feet and then displays the number
+of inches in that many feet.
+
+def feet_to_inches(feet):
+    return feet * 12
+
+def main():
+    feet = int(input("Enter number of feet: "))
+    feet = feet_to_inches(feet)
+    print(feet)
+
+main()
+
+______________________________________________________________________________________________
 
 
 

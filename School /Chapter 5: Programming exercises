@@ -119,6 +119,35 @@ def main():
 main()
 
 ______________________________________________________________________________________________
+STADIUM SEATING
+
+There are three seating categories at a stadium. For a softball game, Class A seats cost $20,
+Class B seats cost $15, and Class C seats cost $10. Write a program that asks how many
+tickets for each class of seats were sold, and then displays the amount of income generated
+from ticket sales.
+
+
+def calculate_income(class_a_tickets, class_b_tickets, class_c_tickets):
+    class_a_income = class_a_tickets * 20
+    class_b_income = class_b_tickets * 15
+    class_c_income = class_c_tickets * 10
+
+    total_income = class_a_income + class_b_income + class_c_income
+    return total_income
+
+
+def main():
+    class_a_tickets = int(input("Enter the number of Class A tickets sold: "))
+    class_b_tickets = int(input("Enter the number of Class B tickets sold: "))
+    class_c_tickets = int(input("Enter the number of Class C tickets sold: "))
+
+    total_income = calculate_income(class_a_tickets, class_b_tickets, class_c_tickets)
+
+    print(f"Total income generated from ticket sales is ${total_income}")
+
+main()
+
+______________________________________________________________________________________________
 
 
 

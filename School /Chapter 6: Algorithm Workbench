@@ -13,3 +13,41 @@ def main():
 main()
 
 ______________________________________________________________________________________
+Write a program that takes an input from the user and asks to enter filename. It then
+opens the file for reading it. If the file is not found, catch the exception and give a
+suitable message.
+
+def main():
+    filename = input("Enter filename: ")
+
+    try:
+        with open(filename, "r") as f:
+            print(f.read())
+    except  FileNotFoundError:
+        print("file not found")
+
+main()
+
+______________________________________________________________________________________
+Write a program to open a file and ask the user to input the filename. If the file
+exists, display the content of the file, else create a file and write the line “File is
+opened in write mode”.
+
+def main():
+    filename = input("Enter filename: ")
+
+    try:
+        with open(filename, "r") as f:
+            print(f.read())
+    except  FileNotFoundError:
+        with open(filename, "w") as f:
+            f.write("File is in write mode")
+
+main()
+
+______________________________________________________________________________________
+
+
+
+
+

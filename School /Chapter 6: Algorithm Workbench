@@ -1,1 +1,15 @@
+Write a program that opens an output file with the filename my_name.txt, writes your
+name to the file, and then closes the file.
 
+Version 1:
+with open('my_name.txt', 'w') as f:
+    f.write('ChatGPT')
+
+Version 2:
+def main():
+    outfile = open("my_name.txt", "w")
+    outfile.write("My Name\n")
+    outfile.close()
+main()
+
+______________________________________________________________________________________

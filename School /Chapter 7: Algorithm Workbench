@@ -92,4 +92,26 @@ Write a statement that creates a two-dimensional list with 5 rows and 3 columns.
 write nested loops that get an integer value from the user for each element in the list.
 
 
+# Step 1: Create an empty two-dimensional list with 5 rows and 3 columns
+matrix = []
+
+for _ in range(5):  # This loop will run 5 times, once for each row
+    row = []  # We'll build each row one-by-one
+    for _ in range(3):  # This loop will run 3 times, once for each column in the row
+        row.append(0)  # We initially fill our row with zeros
+    matrix.append(row)  # Once we've built our row, we add it to the main list (matrix)
+
+# Step 2: Use nested loops to fill the list with user input
+for i in range(5):  # Go through each row
+    for j in range(3):  # Go through each column in the current row
+        # Prompt the user for a value
+        value = int(input(f"Please enter a number for row {i+1}, column {j+1}: "))
+        
+        # Store the user's value in the correct position in the matrix
+        matrix[i][j] = value
+
+# Optional: print the matrix to show the entered values
+for row in matrix:
+    print(row)
+
 

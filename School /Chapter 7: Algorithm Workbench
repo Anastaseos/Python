@@ -1,1 +1,37 @@
+Write a statement that will print the first letter of each element of the following list:
+list1 = [‘Galileo’,‘Oliver’,’Ostwald’,’Descartes’].
+
+list1 = ['Galileo', 'Oliver', 'Ostwald', 'Descartes']
+
+for item in list1:
+    print(item[0])
+
+__________________________________________________________________________________________
+Write a function that accepts a list as an argument and calculates the sum of each element
+of the list.
+
+def sum_of_list(addition):
+    return sum(addition)
+
+numbers = [1, 2, 3, 4, 5]
+print(sum_of_list(numbers))
+
+__________________________________________________________________________________________
+Assume the list numbers1 has 100 elements and numbers2 is an empty list. Write code
+that copies the values in numbers1 to numbers2.
+
+numbers1 = ["100 Elements"]
+numbers2 = []
+
+# Loop Method
+for num in numbers1:
+    numbers2.append(num)
+print(numbers2)
+
+# Slicing Method
+numbers2 = numbers1[:]
+
+# List Method
+numbers2 = list(numbers1)
+__________________________________________________________________________________________
 

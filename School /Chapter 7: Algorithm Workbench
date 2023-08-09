@@ -1,3 +1,40 @@
+Extra List functions before the Algorithm Section
+
+# Total a list
+list = [1, 2, 3, 4, 5, 4, 5, 6, 5, 6, 7, 7]
+total = 0
+
+for i in list:
+    total += i
+print(total)
+
+
+# Finding the Max Value in a list
+list = [1, 2, 3, 4, 5, 4, 5, 6, 5, 6, 7, 7]
+print(max(list))
+
+
+# Keeping first occurrence of each number
+lst = [1, 2, 2, 3, 3, 4, 5, 5, 5]
+unique = []
+
+for i in lst:
+    if i not in unique:
+        unique.append(i)
+
+print(unique) 
+
+
+# Finding the only non-repeating value in a list
+from collections import Counter
+
+lst = [1, 2, 3, 4, 5, 5, 2, 3, 5, 1, 2]
+counter = Counter(lst)
+unique = [item for item, count in counter.items() if count == 1]
+
+print(unique)  
+
+__________________________________________________________________________________________
 Write a statement that will print the first letter of each element of the following list:
 list1 = [‘Galileo’,‘Oliver’,’Ostwald’,’Descartes’].
 

@@ -4,4 +4,88 @@ Design a program that asks the user to enter a store’s sales for each day of t
 amounts should be stored in a list. Use a loop to calculate the total sales for the week and
 display the result.
 
+def main():
+    days_of_the_week = ["M", "T", "W", "Th", "F", "Sa", "Su"]
+    sales = []
+
+    for day in days_of_the_week:
+        while True:
+            try:
+                sale = float(input(f"Enter sales data for {day}: "))
+                sales.append(sale)
+                break
+            except ValueError:
+                print("invalid")
+
+
+    total_sales = sum(sales)
+    print(total_sales)
+
+main()
+__________________________________________________________________________________________
+LOTTERY NUMBER GENERATOR
+
+Design a program that generates a seven-digit lottery number. The program should generate
+seven random numbers, each in the range of 0 through 9, and assign each number to a
+list element. (Random numbers were discussed in Chapter 5.) Then write another loop that
+displays the contents of the list.
+
+import random
+
+def main():
+    lottery_numbers = []
+    for _ in range(7):
+        number = random.randint(0, 9)
+        lottery_numbers.append(number)
+
+    print("The seven digit lottery number is:", end=" ")
+    for num in lottery_numbers:
+        print(num, end=" ")
+    print()
+
+main()
+
+__________________________________________________________________________________________
+RAINFALL STATISTICS
+
+Design a program that lets the user enter the total rainfall for each of 12 months into a
+list. The program should calculate and display the total rainfall for the year, the average
+monthly rainfall, and the months with the highest and lowest amounts.
+
+
+def main():
+    months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+    monthly_rainfall = []
+
+
+    for month in months:
+        while True:
+            try:
+                rainfall = float(input(f"Enter rainfall for {month} in inches: "))
+                monthly_rainfall.append(rainfall)
+                break
+            except ValueError:
+                print("Invalid")
+
+
+    total_rainfall = sum(monthly_rainfall)
+    average_rainfall = total_rainfall / 12
+
+
+    max_rainfall = max(monthly_rainfall)
+    min_rainfall = min(monthly_rainfall)
+    month_max_rainfall = months[monthly_rainfall.index(max_rainfall)]
+    month_min_rainfall = months[monthly_rainfall.index(min_rainfall)]
+
+    print(total_rainfall)
+    print(average_rainfall)
+    print(month_max_rainfall, max_rainfall)
+    print(month_min_rainfall, min_rainfall)
+
+main()
+
+__________________________________________________________________________________________
+
+
+
 

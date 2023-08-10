@@ -43,18 +43,6 @@ for i in range(10):
 print("The total of the numbers you entered is:", total)
 
 __________________________________________________________________________________________
-Write a loop that asks the user to enter a number. The loop should iterate 10 times and
-keep a running total of the numbers entered.
-
-total = 0
-
-for i in range(10):
-    number = float(input("Enter a number: "))
-    total += number
-
-print("The total of the numbers you entered is:", total)
-
-__________________________________________________________________________________________
 Write a program that accepts a number entered by the user and prints its Fibonacci
 series up to 10 times.
 

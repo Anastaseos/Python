@@ -159,6 +159,29 @@ def load_accounts(filename):
 main()
 
 __________________________________________________________________________________________
+LARGER THAN N
+
+In a program, write a function that accepts two arguments: a list, and a number n. Assume
+that the list contains numbers. The function should display all of the numbers in the list
+that are greater than the number n.
+
+def display_greater_numbers(num_list, n):
+    """Display numbers from num_list that are greater than n."""
+    for num in num_list:
+        if num > n:
+            print(num)
+
+# Test the function
+def main():
+    numbers = [10, 15, 20, 25, 30, 35, 40]
+    threshold = 25
+    print(f"Numbers in the list greater than {threshold}:")
+    display_greater_numbers(numbers, threshold)
+
+main()
+
+__________________________________________________________________________________________
+
 
 
 

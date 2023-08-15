@@ -38,3 +38,7 @@ print(lowercase)
 print(uppercase)
 
 ________________________________________________________________________________________
+Write a program that asks the user to input five numbers in the form of a string, and
+then prints the sum of those numbers.
+
+

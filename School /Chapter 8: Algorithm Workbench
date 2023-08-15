@@ -7,3 +7,16 @@ Rewrite this statement so it only makes one comparison and does not use the or o
 if choice.lower() == "y":
 
 ________________________________________________________________________________________
+Write a loop that counts the number of space characters that appear in the string referenced
+by mystring.
+
+space_count = 0
+mystring = "How many spaces are there?"
+
+for char in mystring:
+    if char == ' ':
+        space_count += 1
+
+print(space_count)
+
+________________________________________________________________________________________

@@ -11,12 +11,30 @@ Write a loop that counts the number of space characters that appear in the strin
 by mystring.
 
 space_count = 0
-mystring = "How many spaces are there?"
+sentence = "How many spaces are there?"
 
-for char in mystring:
+for char in sentence:
     if char == ' ':
         space_count += 1
 
 print(space_count)
+
+________________________________________________________________________________________
+Write a program to input a string and print the number of lowercase and uppercase
+characters in the string.
+
+sentence = input(": ")
+
+lowercase = 0
+uppercase = 0
+
+for characters in sentence:
+    if characters.islower():
+        lowercase += 1
+    elif characters.isupper():
+        uppercase += 1
+
+print(lowercase)
+print(uppercase)
 
 ________________________________________________________________________________________

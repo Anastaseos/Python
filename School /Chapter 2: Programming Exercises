@@ -98,34 +98,26 @@ Write a program that calculates the total amount of a meal purchased at a restau
 program should ask the user to enter the charge for the food, and then calculate the amount
 of a 18 percent tip and 7 percent sales tax. Display each of these amounts and the total.
 
-# Global Variable
 SALES_TAX = 0.07
 PERCENT_TIP = 0.18
 
-# Main function
 def main():
-    # User input for the price of the meal
-    # Try and Except for non-numerical handling. Did not do a loop, though.
-    # Code will terminate if there is an error.
-    try:
-        # Variables for meal price, taxes, and tip.
-        meal_price = float(input("Enter amount of your meal: "))
-        taxes = SALES_TAX * meal_price
-        tip = PERCENT_TIP * meal_price
+    while True:
+        try:
+            meal_price = float(input("Enter amount of your meal: "))
+            taxes = SALES_TAX * meal_price
+            tip = PERCENT_TIP * meal_price
 
-        # Total cost of the meal
-        total_cost = meal_price + taxes + tip
+            total_cost = meal_price + taxes + tip
 
-        # Each variable is printed separately, with the total cost being last.
-        print(f"The cost of your meal is {meal_price:.2f}")
-        print(f"Taxes: ${taxes:.2f}")
-        print(f"Gratuity: ${tip:.2f}")
-        print(f"Your total bill comes to ${total_cost:.2f}")
+            print(f"The cost of your meal is {meal_price:.2f}")
+            print(f"Taxes: ${taxes:.2f}")
+            print(f"Gratuity: ${tip:.2f}")
+            print(f"Your total bill comes to ${total_cost:.2f}")
+            break
 
-    # Catching non-numerical errors
-    except ValueError:
-        print("Invalid entry. Enter a valid amount.")
-
+        except ValueError:
+            print("Invalid entry. Enter a valid amount.")
 main()
 
 _________________________________________________________________________________________

@@ -1,1 +1,75 @@
+# Create the Book Class
+class Book:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
 
+    def __repr__(self):
+        return f"Book({self.title}, {self.author}, {self.price})"
+
+
+# Create the Bookstore class which uses collections and exceptions
+
+from collections import defaultdict
+class Bookstore:
+    def __init__(self):
+        self.books = defaultdict(list)
+
+    def add_book(self, book):
+        self.books[book.author].append(book)
+
+    def get_books_by_author(self, author):
+        try:
+            return self.books[author]
+        except KeyError:
+            print(f"No books found by author {author}")
+
+    def get_all_books(self):
+        return self.books
+
+
+# Creat the CLI (Command Line Interface which includes Lambda and Exceptions
+
+def bookstore_cli():
+    bookstore = Bookstore()
+    while True:
+        print("\n1. Add Book\n2. View Books by Author\n3. View All Books\n4. Quit")
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+
+        if choice == 1:
+            title = input("Enter the title of the book: ")
+            author = input("Enter the author of the book: ")
+            try:
+                price = float(input("Enter the price of the book: "))
+            except ValueError:
+                print("Invalid input. Price should be a number.")
+                continue
+
+            book = Book(title, author, price)
+            bookstore.add_book(book)
+
+        elif choice == 2:
+            author = input("Enter the name of the author: ")
+            books_by_author = bookstore.get_books_by_author(author)
+            if books_by_author:
+                print("\n".join(map(lambda book: str(book), books_by_author)))
+
+        elif choice == 3:
+            all_books = bookstore.get_all_books()
+            for author, books in all_books.items():
+                print(f"\n{author}:")
+                print("\n".join(map(lambda book: str(book), books)))
+
+        elif choice == 4:
+            break
+
+        else:
+            print("Invalid choice.")
+
+if __name__ == "__main__":
+    bookstore_cli()

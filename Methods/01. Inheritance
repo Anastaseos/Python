@@ -1,1 +1,49 @@
+# Creating a Parent class and using the Inheritance method onto other classes   
+
+class Mammal:
+    def walk(self):
+        print("Walking!")
+
+
+class Dog(Mammal):
+    def bark(self):
+        print("Barking!")
+
+
+class Cat(Mammal):
+    pass
+
+
+dog = Dog()
+cat = Cat()
+dog.bark()
+cat.walk()
+
+_________________________________________
+# A slightly more advanced version of the Inheritance topic
+
+# This is the parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print("The animal makes a sound")
+
+
+# This is the child class, it inherits from Animal
+class Dog(Animal):
+    def bark(self):
+        print("The dog barks")
+
+
+# Create an instance of the Animal class
+animal = Animal("Generic animal")
+animal.speak()  # Outputs: The animal makes a sound
+
+
+# Create an instance of the Dog class
+dog = Dog("Fido")
+dog.speak()  # Outputs: The animal makes a sound
+dog.bark()  # Outputs: The dog barks
 

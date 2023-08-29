@@ -1,1 +1,52 @@
+# Finding the Total in a List
 
+prices = [10, 10, 20, 20, 30, 30, 40, 40, 50, 50]
+total = 0
+
+for price in prices:
+    total += price
+
+print(total)
+
+____________________________________________________
+# Removing a Duplicate in a List
+
+prices = [10, 10, 20, 20, 30, 30, 40, 40, 50, 50]
+unique = []
+
+for price in prices:
+    if price not in unique:
+        unique.append(price)
+
+print(unique)
+
+____________________________________________________
+# To find the Max Value in a List
+
+prices = [10, 10, 20, 20, 30, 30, 40, 40, 50, 50]
+max = prices[0]
+
+for price in prices:
+    if price > max:
+        max = price
+
+
+print(max)
+
+____________________________________________________
+# Dictionary 
+
+question = input("Who is your favorite KH Character?  ")
+characters = {
+    "1": "Sora",
+    "2": "Riku",
+    "3": "Kairi"
+}
+
+
+output = ""
+for character in question:
+    output += characters.get(character, " ! ") + " "
+
+print(output)
+____________________________________________________

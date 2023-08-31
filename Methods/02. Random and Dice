@@ -1,1 +1,32 @@
+# Random.random is for 0 and 1
+# Random.randint(x, y) is for values between x and y
+# Random.choice returns a singular item
+# Random.choices returns a list of items
+
+import random
+
+for i in range(10):
+    print(random.randint(0, 100))
+    print(random.random())
+______________________________________________
+
+import random
+
+members = ["A", "B", "C"]
+leader = random.choice(members)
+print(leader)
+______________________________________________
+
+# Rolling a Dice
+import random
+
+class Dice:
+    def roll(self):
+        first = random.randint(1,6)
+        second = random.randint(1, 6)
+        return first, second
+
+
+dice = Dice()
+print(dice.roll())
 

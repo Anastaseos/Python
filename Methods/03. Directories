@@ -1,1 +1,25 @@
+from pathlib import Path
+
+# Return a boolean to see if the directory exists
+path = Path("main.py")
+print(path.exists())
+
+
+# Adding a Directory
+path = Path("emails")
+print(path.mkdir())
+
+
+# Deleting a directory
+print(path.rmdir())
+
+
+#Can look for files and directories in the current path. An * searches all files / directories, and adding
+# .py will search for them in the python directories
+
+
+# This will give all the py files in the current directory
+path = Path()
+for file in path.glob("*.py"):
+    print(file)
 

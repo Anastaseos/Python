@@ -1,18 +1,18 @@
 KILOMETER CONVERTER
 
 Write a program that asks the user to enter a distance in kilometers, and then converts that
-distance to miles. The conversion formula is as follows:
+distance to miles. The conversion formula is as follows: miles = km * 0.621371
 
-def km_to_miles():
-    km = float(input("Enter km: "))
-    miles = km * 0.6213
-    return miles
+def km_to_miles(km):
+    return km * 0.621371
 
 
 def main():
-    miles = km_to_miles()
-    print("The distance in miles is:", miles)
+    convert = float(input("Enter distance in kilometers: "))
 
+    miles = km_to_miles(convert)
+
+    print(f"The distance from kilometers to miles is {miles} miles.")
 main()
 
 ______________________________________________________________________________________________

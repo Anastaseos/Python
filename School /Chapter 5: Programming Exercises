@@ -14,6 +14,62 @@ def main():
 main()
 
 ______________________________________________________________________________________________
+SALES TAX PROGRAM REFACTORING
+
+Programming Exercise #6 in Chapter 2 was the Sales Tax program. For that exercise you
+were asked to write a program that calculates and displays the county and state sales tax
+on a purchase. If you have already written that program, redesign it so the subtasks are in
+functions. If you have not already written that program, write it using functions.
+
+
+
+# This function returns the state sales tax
+def state_tax(state):
+    return state * 0.05
+
+# This function returns the county sales tax
+def county_tax(county):
+    return county * 0.025
+
+# Our main function that will call the other functions
+def main():
+    # In case there is an error, this While loop will allow the user to reenter a purchase price
+    while True:
+        # Try and Except to handle non-numerical errors
+        try:
+            # User input for the purchase price
+            purchase = float(input("Enter item amount: "))
+            # The if statement disallows nonzero entries
+            if purchase <= 0:
+                print("Enter amount greater than 0")
+                continue
+            # This variable calls the state tax function and inserts the purchase variable
+            state_sales_tax = state_tax(purchase)
+            # This variable calls the county sales tax variable and inserts the purchase variable
+            county_sales_Tax = county_tax(purchase)
+            # Total tax adds together the total tax cost of the purchase
+            total_tax = state_sales_tax + county_sales_Tax
+            # This variable adds together the purchase and the tax cost
+            total = purchase + total_tax
+
+            # These print function displays the purchase only
+            print(f"Amount of the purchase: ${purchase:.2f}")
+            # This print function displays the state sales tax only
+            print(f"State sales tax: ${state_sales_tax:.2f}")
+            # This print function displays the county sales tax only
+            print(f"County sales tax: ${county_sales_Tax:.2f}")
+            # This print function displays total tax
+            print(f"Total tax is: ${total_tax:.2f}")
+            # This print function displays the total cost of the purchase
+            print(f"Total purchase cost is ${total:.2f}")
+            break
+
+        # Will catch non numerical errors
+        except ValueError:
+            print("Invalid input. Enter a numerical value.")
+main()
+
+______________________________________________________________________________________________
 HOW MUCH INSURANCE
 
 Many financial experts advise that property owners should insure their homes or buildings

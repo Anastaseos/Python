@@ -3,15 +3,13 @@ KILOMETER CONVERTER
 Write a program that asks the user to enter a distance in kilometers, and then converts that
 distance to miles. The conversion formula is as follows: miles = km * 0.621371
 
+
 def km_to_miles(km):
     return km * 0.621371
 
-
 def main():
     convert = float(input("Enter distance in kilometers: "))
-
     miles = km_to_miles(convert)
-
     print(f"The distance from kilometers to miles is {miles} miles.")
 main()
 
@@ -23,13 +21,13 @@ for at least 80 percent of the amount it would cost to replace the structure. Wr
 gram that asks the user to enter the replacement cost of a building and then displays the
 minimum amount of insurance he or she should buy for the property.
 
-def insurance():
-     worth = float(input("Enter worth of the Estate: "))
-     insurance = worth * 0.8
-     return insurance
+def insurance(replacement_cost):
+    return replacement_cost * 0.8
+
 def main():
-     min_insurance = insurance()
-     print(min_insurance)
+    total_worth = float(input("Enter worth of the Estate: "))
+    minimum_insurance = insurance(total_worth)
+    print(f"The minimum recommendation is ${minimum_insurance:.2f}")
 main()
 
 ______________________________________________________________________________________________

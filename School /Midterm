@@ -1,1 +1,92 @@
+# Anastasi Giacoumopoulos
+# Assignment Midterm
+# 09 / 08 / 2023
+# Create a program named lastname_midterm that allows a user to make a purchase of a product.
+# The user has a choice of small, medium, large or ultimate.
+# They will also enter the quantity of whichever item they choose.
+# The cost of each product is as follows:
+# Small: $40
+# Medium: $60
+# Large: $80
+# Ultimate: $100
+# After they enter their purchase choice, the program should then ask for the user’s name.
+# Once complete, output the user’s name, product, quantity purchased, and the total cost for the entire purchase.
+# If the user enters an incorrect size, display an error message.
+
+
+
+#I wanted to import time so that I can set the pace a little bit when options are printed to the console.
+# With Baldurs Gate having just been released,I wanted to do a bit of a throwback to
+# the Friendly Arm Inn and create a "general store" with this project.
+import time
+
+# Everything is built into the main function
+def main():
+    # A general greeting with a 2 second delay between the options print menu.
+    print("Welcome to The Friendly Arm Inn's General Goods Store, adventurer!")
+    time.sleep(2)
+    print("A moment while we load our options menu...")
+    time.sleep(2)
+
+    # A dictionary to store the prices of the Inn's items.
+    products = {
+        "1": 40,
+        "2": 60,
+        "3": 80,
+        "4": 100
+    }
+
+    # Using a While loop with Try and Except for error handling.
+    while True:
+        try:
+            # Printing the options with the price tag attached
+            print("Option 1: Small - $40 dollars")
+            print("Option 2: Medium - $60 dollars")
+            print("Option 3: Large - $80 dollars")
+            print("Option 4: Ultimate - $100 dollars")
+            print("Option 5: Exit")
+            time.sleep(2)
+
+            # User input for their choice
+            choice = input("Enter your choice here: ")
+            time.sleep(1)
+
+            # Will break the loop if they choose the Exit option, which is set to number 5
+            if choice == "5":
+                print("Be careful out there adventurer!")
+                break
+            # Elif statement in case user chooses something beyond the dictionary.
+            elif choice not in products:
+                print("Oops! Invalid choice, please try that again")
+                continue
+            #Concatenated string so the user can enter the quantity of the item they chose.
+            amount = float(input(f"Great choice! Please enter the amount you would like to buy for option {choice}: "))
+            #If statement if they choose a negative number or 0
+            if amount <= 0:
+                print("Oops! The amount needs to be greater than 0 please!")
+                continue
+
+            #Variable for storing the users name
+            product_research_questionnare = input("Fantastic! Now if you would be so kind as to please fill out your first and last name here please: ")
+            #Variable that will total the product choice multiplied by the amount the user set.
+            your_total = products[choice] * amount
+
+            #Two print statements with a 2 second timer to separate the bulk of printed statements that will follow
+            print("Great! Let's wrap up before you head out")
+            print("-" * 35)
+            time.sleep(2)
+            #Print statements with the users Name, item choice, the amount they are buying, and their total cost.
+            print(f"Your account name is listed as: {product_research_questionnare}")
+            print(f"You've selected the option: {choice}")
+            print(f"This item costs: {amount}")
+            print(f"Your total cost comes to: {your_total}")
+            time.sleep(2)
+            #Farewell adventurer!
+            print("Thank you for shopping at The Friendly Arm Inn! Be careful out there!")
+            break
+        #Except value for error handling beyond the if-elif statements
+        except ValueError:
+            print("Oops! Let's try that again. Please enter a valid number or option")
+# Calls the function
+main()
 

@@ -1,1 +1,73 @@
+# Iterate over your list
+list = [10, 20, 30]
+
+for i in list:
+    print(i)
+_______________________________________________
+
+# Check if items are in the list
+list = [10, 20, 30]
+
+if 10 in list:
+    print("yes")
+else:
+    print("no")
+_______________________________________________
+
+# Check number of elements in list
+list = [10, 20, 30]
+
+print(len(list))
+_______________________________________________
+
+# Append, Insert, Pop, Remove, Reverse, Sort, 
+list = [10, 20, 30]
+
+list.append(40)
+list.insert(1, 40)
+list.pop()
+list.remove(20)
+list.reverse()
+Lists
+
+list.sort() and new_list.sorted()
+
+print(list)
+_______________________________________________
+
+# Multiply and Combine lists
+list = [0] * 5
+print(list)
+
+list2 = [1, 2, 3, 4, 5]
+
+new_list = list + list2
+
+print(new_list)
+_______________________________________________
+
+# Slice Lists
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 = list[2:5]
+list2 = list[:5]
+list2 = list[1:]
+_______________________________________________
+
+# Copying a list
+list = [10, 20, 30, 40, 50]
+
+list_copy = list.copy() or list_copy = list(list)
+
+list_copy.append(60)
+
+print(list)
+print(list_copy)
+_______________________________________________
+
+# List Comprehension
+list = [1, 2, 3, 4, 5]
+list2 = [i*i for i in list]
+
+print(list)
+print(list2)
 

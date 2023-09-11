@@ -1,1 +1,61 @@
+# Creating a tuple
+my_tuple = tuple(["Hello", 30, "PA"])
+
+print(my_tuple)
+
+item = my_tuple[0]
+print(item)
+_______________________________________________
+
+# Count the total objects in the tuple
+my_tuple = ("a", "b", "b", "c", "c")
+
+print(len(my_tuple))
+
+# Count the specific number of objects
+my_tuple = ("a", "b", "b", "c", "c")
+
+print(my_tuple.count("b"))
+_______________________________________________
+
+# Find the index of the tuple
+my_tuple = ("a", "b", "b", "c", "c")
+
+print(my_tuple.index("a"))
+_______________________________________________
+
+# Convert between Tuple and List
+my_tuple = ("a", "b", "b", "c", "c")
+
+my_list = list(my_tuple)
+print(my_list)
+
+my_tuple2 = tuple(my_list)
+print(my_tuple2)
+_______________________________________________
+
+# Unpacking a Tuple
+my_tuple = "Hello", 30, "PA"
+
+greeting, number, state = my_tuple
+
+print(greeting)
+print(number)
+print(state)
+_______________________________________________
+
+# Comparing data size of Tuples and Lists
+import sys
+my_list = [0, 1, 2, 3, "Hi", True]
+my_tuple = (0, 1, 2, 3, "Hi", True)
+
+print(sys.getsizeof(my_list))
+print(sys.getsizeof(my_tuple))
+_______________________________________________
+
+# Testing the Timing of Lists and Tuples
+import timeit
+
+print(timeit.timeit(stmt="[0, 1, 2, 3, 4, 5]", number=1000000))
+print(timeit.timeit(stmt="(0, 1, 2, 3, 4, 5)", number=1000000))
 

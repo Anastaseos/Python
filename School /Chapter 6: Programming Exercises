@@ -49,23 +49,22 @@ Assume that a file containing a series of integers is named numbers.txt and exis
 computer’s disk. Write a program that reads all of the numbers stored in the file and calculates
 their total.
 
-
-# All contained in the main function
+# Our main function
 def main():
-    # Using Try - Except just in case the file isn't found.
-    try:
-        # This will total the integers in the list
-        total = 0
-        # Opens the file
-        with open("numbers.txt", "r") as file:
-            # Converts the string into integers and leave sout any newline characters.
-            for integers in file:
-                total += int(integers.strip())
+    # Variable to total the numbers.txt file
+    total = 0
 
-            # Prints the total
-            print(f"The total sum is {total}")
-    # In case the file isn't found.
-    except:
-        print("File not found")
+    # Opening the file with "r" to read
+    inside_file = open("numbers.txt", "r")
+    # Converts the file lines to an integer
+    for numbers in inside_file:
+        # Totals the integers
+        total += int(numbers.strip())
+    # Prints the total
+    print(f"The total in the numbers file is: {total}")
+
+
+#Calls the function
+main()
 
 _______________________________________________________________________________________

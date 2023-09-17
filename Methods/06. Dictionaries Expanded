@@ -1,1 +1,111 @@
+# Different ways to create a dictionary
+dictionary = {
+    "name":"Sora",
+    "age": "15",
+    "city": "islands"
+}
+print(dictionary)
+
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+print(dictionary2)
+___________________________________________________
+
+# Check values of the corresponding key
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+
+value1 = dictionary2["name"]
+value2 = dictionary2["age"]
+
+print(value1)
+print(value2)
+___________________________________________________
+
+# Dictionaries are mutable
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+
+dictionary2["email"] = "sora@keyblade.com"
+print(dictionary2)
+___________________________________________________
+
+# Delete items
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+
+del dictionary2["age"]
+print(dictionary2)
+___________________________________________________
+
+# Check if a key is in the Dictionary
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+
+if "name" in dictionary2:
+    print("yes")
+else:
+    print("no")
+    
+# We can also use
+try:
+    print(dictionary2["name"])
+except:
+    print("Error")
+___________________________________________________
+
+# Iterate the dictionary 
+
+dictionary2 = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+for i in dictionary2:
+    print(i)
+
+for key, value in dictionary2.items():
+    print(key, value)
+___________________________________________________
+
+# Copy and Merge Dictionaries
+dictionary2_copy = dictionary2.copy()
+dictionary2_copy["email"] = "sora@keyblade.com"
+
+print(dictionary2)
+print(dictionary2_copy)
+___________________________________________________
+
+# Merging with Update overwrites the first with the second dictionary
+dictionary = dict(
+    name = "Sora",
+    age = 15,
+    city = "Islands"
+)
+
+dictionary2 = dict(
+    name = "Riku",
+    age = 16,
+    email = "twat@keyblade.com"
+)
+
+dictionary.update(dictionary2)
+
+print(dictionary)
+
 

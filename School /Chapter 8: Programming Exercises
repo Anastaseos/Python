@@ -1,1 +1,30 @@
+# Anastasi Giacoumopoulos
+# Assignment Chapter 8 Problem 8
+# 9 / 19 / 2023
+# Sentence Capitalizer: Write a program with a function that accepts a string as an argument and returns a copy of
+# the string with the first character of each sentence capitalized. For instance, if the argument
+# is “hello. my name is Joe. what is your name?” the function should return the string “Hello.
+# My name is Joe. What is your name?” The program should let the user enter a string and
+# then pass it to the function. The modified string should be displayed.
 
+
+# We have a function with the string1 parameter and the str hint.
+def capitalize_sentence(string1: str):
+    # We are splitting the string into different sentences
+    sentences = string1.split(". ")
+
+    # Using an empty list for the capilatized sentences
+    capitalized_sentences = []
+
+    # Loop to go through the sentences and capitalize them.
+    for sentence in sentences:
+        capitalized_sentences.append(sentence.capitalize())
+
+    # We are going to join the capitalized sentences
+    return ". ".join(capitalized_sentences)
+
+# User input for the sentence
+user_input = input("Please enter a string: ")
+
+# Prints the new sentence.
+print(capitalize_sentence(user_input))
